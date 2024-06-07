@@ -6,7 +6,7 @@
         return Math.floor(Math.random() * (max - min + 1) + min);
       },
       get period() {
-        var dateFuture = new Date(new Date().getFullYear() + 1, 0, 1);
+        var dateFuture = new Date(2024, 8, 14);
         var dateNow = new Date();
         var seconds = Math.floor((dateFuture - (dateNow))/1000);
         var minutes = Math.floor(seconds/60);
@@ -16,7 +16,7 @@
         minutes = minutes-(days*24*60)-(hours*60);
         seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
         return {
-          year: new Date().getFullYear() + 1,
+          year: 'transatlantic ❤️ love ❤️journey',
           days: days,
           hours: hours,
           minutes: minutes,
@@ -33,12 +33,16 @@
       year: function(className) {
         var timeline = new TimelineMax();
         var year = animation.element(animation.newYear, "div", className);
+        // console.log(animation.period.year)
         for (var i=0; i<=String(animation.period.year).length-1; i++) {
+
           var digit = animation.element(year, "div", "digit", String(animation.period.year).substr(i, 1));
+          console.log(String(animation.period.year).substr(i, 1))
           digit.style.top = (0 - (digit.clientHeight * 2)) + "px";
           timeline
             .to(digit, 0.5, {top: 0, opacity: 1, ease: Bounce.easeOut});
         }
+        console.log(year)
         return year;
       },
       animate: function() {
@@ -92,7 +96,8 @@
           .to(minutes, 0.5, {top: 0, opacity: 1}, 0.5)
           .to(seconds, 0.5, {top: 0, opacity: 1}, 0.75)
           .set(triangles, {opacity: 1}, 3)
-          .add(fullTimeline, 3);
+          .add(fullTimeline, 3)
+          .repeat(-1);
       },
       plural: function(property) {
         var period = animation.period;
