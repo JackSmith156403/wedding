@@ -2005,6 +2005,13 @@ body {
 	}
   }
 
-
+  .n-color {
+	color: rgb(128, 0, 128); /* Replace with the color you want for "N" */
+  }
+  
+  .a-color {
+	color: rgb(33, 90, 249); /* Replace with the color you want for "A" */
+  }
+  
   /* Ocean */
  
