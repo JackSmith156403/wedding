@@ -16,7 +16,7 @@
         minutes = minutes-(days*24*60)-(hours*60);
         seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
         return {
-          year: 'transatlantic ❤️ love ❤️journey',
+          year: 'transatlantic 💙 love 💜 journey',
           days: days,
           hours: hours,
           minutes: minutes,
