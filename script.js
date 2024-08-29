@@ -6,7 +6,7 @@
         return Math.floor(Math.random() * (max - min + 1) + min);
       },
       get period() {
-        var dateFuture = new Date(2024, 8, 14);
+        var dateFuture = new Date(Date.UTC(2024, 8, 14, 8, 0, 0));
         var dateNow = new Date();
         var seconds = Math.floor((dateFuture - (dateNow))/1000);
         var minutes = Math.floor(seconds/60);
